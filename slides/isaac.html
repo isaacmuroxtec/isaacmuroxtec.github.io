@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<title>XXXXXX - Plantilla de presentación</title>
+
+		<meta name="description" content="Plantilla per fer presentacions">
+		<meta name="author" content="Isaac Muro">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/moon.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section id="Processing">
+					<a href="http://www.processing.org"><img width="100" height="100" src="http://upload.wikimedia.org/wikipedia/commons/5/59/Processing_Logo_Clipped.svg"/></a>	
+					<h1>Processing</h1>
+					<h3>Creating interactive programs</h3>
+					
+					<p>
+						<small>Creat per <a href="http://goo.gl/Q2zdYG">Isaac Muro</a> </small><br />
+						<img width="118" height="44" src="http://es.creativecommons.org/blog/wp-content/uploads/2013/04/by-sa_petit.png" alt="Creative Commons Licence">
+					</p>
+				</section>
+
+				<section id="index">
+					<h2>Index</h2>
+					<span class="fragment roll-in">
+					<ol>
+						<li><a href="#/obtenir">Obtenir Processing</a></li>
+						<li>OpenProcessing.org</li>
+						<li>Entorn de desenvolupament</li>
+						<li>Primer Programa: Hola Mon</li>
+					</ol>
+					</span>
+				</section>
+
+				<section id="obtenir">
+					<h2>Obtenir processing</h2>
+					<ul>
+						<li><a href="http://www.processing.org">Descarregar Processing</a></li>
+						<li>Obrir l'IDE</li>
+						<img style="background:#FFFFFF;border:0px" src="img/ide.gif"/>
+					</ul>
+				</section>
+				<section data-background="#007777" id="activitat1">
+					<h2>1. Reviseu els exemples</h2>
+					<p>Obriu el Processing, <span style="color:blue">File -> Examples</span>. Allà trobareu molts exemples on podeu veure el codi font i el resultat d'executar el codi. 
+					</p>
+					<h2>2. Primer programa</h2>
+						<pre><code data-trim contenteditable class="actionscript">
+void setup(){
+  size(200, 100);
+}
+
+void draw(){
+  background(0);
+  println("Hola Mon");
+}
+	</code></pre>
+				</section>
+				<section id="openprocessing">
+					<h2>OpenProcessing</h2>
+					<ul>
+						<li><a href="http://openprocessing.org/">Visita OpenProcessing</a></li>
+						<li>Creat un usuari. <span class="fragment highlight-red">NO</span> posis el nom complet</li>
+						<li>Investiga i executa els sketchs recomenats</li>
+						<li>Revisem els sketchs dels vostres companys <a href="http://openprocessing.org/classroom/3086">[1]</a> <a href="http://openprocessing.org/classroom/3262">[2]</a> <a href="http://openprocessing.org/classroom/2101">[3]</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Eix Y Invertit</h2>
+					<ul>
+						<li>L'eix X d'esquerra a dreta...</li>
+						<li>L'eix Y de dalt cap abaix...</li>
+						<img style="background:#FFFFFF;border:0px" src="img/Environment1.gif"/>
+					</ul>
+				</section>
+				<section>
+					<h2>size</h2>
+						<p>
+							La funció <a href="http://processing.org/reference/size_.html">size</a> determina l'amplada i l'altura de l'sketch
+						</p>
+						<pre><code data-trim contenteditable class="actionscript">
+size(200, 100);
+// 200 és l'amplada de l'sketch en pixels 
+// 100 és l'altura de l'sketch en pixels
+					</code></pre>
+						<img  style="background:#FFFFFF;border:0px" src="img/size_0.png"/>
+				</section>
+				<section>
+					<h2>background</h2>
+						<p>
+							La funció <a href="http://processing.org/reference/background_.html">background</a> determina el color o la imatge de fons de l'sketch.	Els colors estàn en format <a href="http://es.wikipedia.org/wiki/RGB">RGB</a>.
+						</p>
+						<pre><code data-trim contenteditable class="actionscript">
+background(145, 13, 86);
+// 145 és la quantitat de vermell (Red) 
+// 13 és la quantitat de verd (Green)
+// 86 és la quantitat de blau (Blue)
+					</code></pre>
+						<div style="margin:0 auto 0 auto;width:200px;height:100px;background:#910D56"></div>
+				</section>
+				<section>
+					<h2>Figures</h2>
+					<ul>
+						<li>Rect</li>
+						<li>Stroke/noStroke</li>
+						<li>Fill/noFill</li>
+						<li>Point</li>
+						<li>Line</li>
+						<li>Ellipse</li>
+						<img style="background:#FFFFFF;border:0px" src="img/figures.gif"/>
+					</ul>
+				</section>
+				<section>
+					<h2>rect</h2>
+						<p>
+							La funció <a href="http://processing.org/reference/rect_.html">rect</a> dibuixa un rectangle a la pantalla.
+						</p>
+						<pre><code data-trim contenteditable class="actionscript">
+rect(30, 20, 55, 55);
+// 30 és la posició X on comença a dibuixar-se el rectangle.
+// 20 és la posició Y on comença a dibuixar-se el rectangle. 
+// 55 és l'ampla del rectangle.
+// 55 és l'altura del rectangle.
+					</code></pre>
+					<img style="background:#FFFFFF;border:0px" src="img/rect_0.png"/>
+	
+				</section>
+
+
+				<section>
+					<h2>stroke</h2>
+						<p>
+							La funció <a href="http://processing.org/reference/stroke_.html">stroke</a> determina el color del contorn de les figures que es dibuixen a continuació. Els colors estàn en format <a href="http://es.wikipedia.org/wiki/RGB">RGB</a>.
+						</p>
+						<pre><code data-trim contenteditable class="actionscript">
+stroke(204, 102, 0);
+// 204 és la quantitat de vermell (Red) 
+// 102 és la quantitat de verd (Green)
+// 0 és la quantitat de blau (Blue)
+					</code></pre>
+					<img style="background:#FFFFFF;border:0px" src="img/stroke_1.png"/>
+	
+				</section>
+				<section>
+					<h2>nostroke</h2>
+						<p>
+							La funció <a href="http://processing.org/reference/noStroke_.html">noStroke</a> deshabilita el color del contorn de les figures.
+						</p>
+						<pre><code data-trim contenteditable class="actionscript">
+noStroke();
+					</code></pre>
+					<img style="background:#FFFFFF;border:0px" src="img/noStroke_.png"/>
+				</section>
+				<section>
+					<h2>fill</h2>
+						<p>
+							La funció <a href="http://processing.org/reference/fill_.html">fill</a> determina el color del de l'interior de les figures que es dibuixen a continuació sense pintar el contorn. Els colors estàn en format <a href="http://es.wikipedia.org/wiki/RGB">RGB</a>.
+						</p>
+						<pre><code data-trim contenteditable class="actionscript">
+fill(204, 102, 0);
+// 204 és la quantitat de vermell (Red) 
+// 102 és la quantitat de verd (Green)
+// 0 és la quantitat de blau (Blue)
+					</code></pre>
+					<img style="background:#FFFFFF;border:0px" src="img/fill_1.png"/>
+				</section>
+				<section>
+					<h2>nofill</h2>
+						<p>
+							La funció <a href="http://processing.org/reference/noFill_.html">noFill</a> deshabilita el color de l'interior de les figures.
+						</p>
+						<pre><code data-trim contenteditable class="actionscript">
+noFill();
+					</code></pre>
+					<img style="background:#FFFFFF;border:0px" src="img/noFill_.png"/>
+				</section>
+
+				<section data-background="#007777" id="activitat2">
+						<h2>Cara somrient</h2>
+						<p>
+							Intenteu reproduir la cara que teniu a continuació amb codi Processing. Només amb les instruccions que hem explicat, hi hauria suficient. 
+						</p>
+							<img  src="img/cara.png"/>
+				</section>
+				<section>
+					<h2>point</h2>
+						<p>
+							La funció <a href="http://processing.org/reference/point_.html">point</a> dibuixa un punt en les coordenades que li indiquis.
+						</p>
+						<pre><code data-trim contenteditable class="actionscript">
+point(30, 20);
+point(85, 20);
+point(85, 75);
+point(30, 75);
+// Els dos paràmetres són la coordenada X i Y del punt.
+					</code></pre>
+					<img style="background:#FFFFFF;border:0px" src="img/point_0.png"/>
+				</section>
+				<section>
+					<h2>line</h2>
+						<p>
+							La funció <a href="http://processing.org/reference/line_.html">line</a> dibuixa una línia entre els dos punts indicats per les coordenades. 
+						</p>
+						<pre><code data-trim contenteditable class="actionscript">
+line(30, 20, 85, 75);
+// 30 és la coordenada X del primer punt
+// 20 és la coordenada Y del primer punt
+// 85 és la coordenada X del segon punt
+// 75 és la coordenada Y del segon punt
+// La línia es dibuixa entre el primer i el segon punt
+					</code></pre>
+					<img style="background:#FFFFFF;border:0px" src="img/line_0.png"/>
+				</section>
+				<section>
+					<h2>triangle</h2>
+						<p>
+							La funció <a href="http://processing.org/reference/triangle_.html">triangle</a> dibuixa un triangle utilitzant els 3 punts que se li passan com a paràmetres (6 nombres).
+						</p>
+						<pre><code data-trim contenteditable class="actionscript">
+triangle(30, 75, 58, 20, 86, 75);
+// 30 és la coordenada X del primer punt
+// 75 és la coordenada Y del primer punt
+// 58 és la coordenada X del segon punt
+// 20 és la coordenada Y del segon punt
+// 86 és la coordenada X del tercer punt
+// 75 és la coordenada Y del tercer punt
+					</code></pre>
+					<img style="background:#FFFFFF;border:0px" src="img/triangle_.png"/>
+				</section>
+				<section>
+					<h2>ellipse</h2>
+						<p>
+							La funció <a href="http://processing.org/reference/ellipse_.html">ellipse</a> dibuixa una elipse utilitzant un punt com a centre, i dos valors com a radi en X i radi en Y. 
+						</p>
+						<pre><code data-trim contenteditable class="actionscript">
+ellipse(56, 46, 55, 55);
+// 56 és la coordenada X del radi
+// 46 és la coordenada Y del radi
+// 55 és l'amplada del radi en X.
+// 55 és l'altura del radi en Y.
+					</code></pre>
+					<img style="background:#FFFFFF;border:0px" src="img/ellipse_.png"/>
+				</section>
+				<section>
+					<h2>arc</h2>
+						<p>
+							La funció <a href="http://processing.org/reference/arc_.html">arc</a> dibuixa un arc, que es pot entendre com una secció d'una elipse. 
+						</p>
+						<pre><code data-trim contenteditable class="actionscript">
+arc(50, 55, 50, 50, 0, HALF_PI);
+// 50 és la coordenada X del radi
+// 55 és la coordenada Y del radi
+// 50 és l'amplada del radi en X.
+// 50 és l'altura del radi en Y.
+// 0 és on comença l'arc en graus. 
+// HALF_PI és on acaba l'arc en graus. 
+noFill();
+arc(50, 55, 60, 60, HALF_PI, PI);
+arc(50, 55, 70, 70, PI, PI+QUARTER_PI);
+arc(50, 55, 80, 80, PI+QUARTER_PI, TWO_PI);
+
+					</code></pre>
+					<img style="background:#FFFFFF;border:0px" src="img/arc_.png"/>
+				</section>
+				<section>
+					<h2>strokeweight</h2>
+						<p>
+							La funció <a href="http://processing.org/reference/strokeWeight_.html">strokeWeight</a> canvia l'amplada del contorn de les figures. 
+						</p>
+						<pre><code data-trim contenteditable class="actionscript">
+strokeWeight(1);  // Default
+line(20, 20, 80, 20);
+strokeWeight(4);  // Thicker
+line(20, 40, 80, 40);
+strokeWeight(10);  // Beastly
+line(20, 70, 80, 70);
+					</code></pre>
+					<img style="background:#FFFFFF;border:0px" src="img/strokeWeight_.png"/>
+				</section>
+
+				<section data-background="#8c4738">
+					<h2>deures</h2>
+					<p>
+						Crear un personatge expresant un sentiment. Podeu dibuixar-vos a vosaltres. 
+					</p>
+					<p>
+						Exemples...
+					</p>
+					
+					<img style="background:#FFFFFF;border:0px" src="img/homer.png"/>
+					<img style="background:#FFFFFF;border:0px" src="img/somrient.png"/>
+				</section>
+				<section id="setupdraw">
+					<h2>setup i draw</h2>
+						<p>
+							La funció <a href="http://processing.org/reference/arc_.html">arc</a> dibuixa un arc, que es pot entendre com una secció d'una elipse. 
+						</p>
+						<pre><code data-trim contenteditable class="actionscript">
+arc(50, 55, 50, 50, 0, HALF_PI);
+// 50 és la coordenada X del radi
+// 55 és la coordenada Y del radi
+// 50 és l'amplada del radi en X.
+// 50 és l'altura del radi en Y.
+// 0 és on comença l'arc en graus. 
+// HALF_PI és on acaba l'arc en graus. 
+noFill();
+arc(50, 55, 60, 60, HALF_PI, PI);
+arc(50, 55, 70, 70, PI, PI+QUARTER_PI);
+arc(50, 55, 80, 80, PI+QUARTER_PI, TWO_PI);
+
+					</code></pre>
+					<img style="background:#FFFFFF;border:0px" src="img/arc_.png"/>
+				</section>
+
+
+				<section>
+					<h1>THANKS</h1>
+					<ul>
+						<li><a href="http://revealjs.jit.su/">Hakim El Hattab. Reveal.js</a></li>
+						<li><a href="processing.org">processing.org</a></li>
+						<li><a href="openprocessing.org">openprocessing.org</a></li>
+						<li><a href="http://go.yuri.at/p5/tutorial/">Tutorial de Processing para mentes Macromedia</a></li>
+					</ul>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				//isaac
+				slideNumber: true,
+				mouseWheel: true,
+				transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
+				backgroundTransition: 'slide',
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				//transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

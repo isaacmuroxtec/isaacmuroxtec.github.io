@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<title>2. Components Android - Tutorial Android</title>
+
+		<meta name="description" content="Tutorial Android">
+		<meta name="author" content="Isaac Muro">
+
+		<link rel="stylesheet" href="../css/reveal.min.css">
+		<link rel="stylesheet" href="../css/theme/moon.css" id="theme">
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="../lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../lib/js/html5shiv.js"></script>
+		<![endif]-->
+		<style>
+		.blue{
+			color:#1b91ff;
+		}
+		.green{
+			color:#17ff2e;
+		}
+		.red{
+			color:#ff2c2d;
+		}
+		</style>
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<a href="http://www.android.com"><img width="100" height="100" src="../img/mobils/androidfirst.png"/></a>
+					<h1>Android</h1>
+					<h3>2. Components Android</h3>
+					<p>
+						<small>Creat per <a href="http://goo.gl/Q2zdYG">Isaac Muro</a> </small><br />
+						<img width="118" height="44" src="http://es.creativecommons.org/blog/wp-content/uploads/2013/04/by-sa_petit.png" alt="Creative Commons Licence">
+					</p>
+				</section>
+				<section>
+					<h2>Creació del primer projecte</h2>
+					<p>Crearem un projecte de prova, el mític HelloWorld.
+					</p>
+						<img src="../img/mobils/package.png"/>
+						
+				</section>
+				<section>
+					<h2>Carpetes</h2>
+						<ul>
+							<li>La carpeta <span class="red">/src</span> conté els fitxers .java amb el codi del projecte. Escriureu el codi de la vostra aplicació en aquesta carpeta </li>
+							<li>La carpeta <span class="red">/gen</span> conté el fitxer R.java, un fitxer generat pel compilador que serveix de referència a tots els recursos del vostre projecte. NO TOCAR</li>
+							<li>La biblioteca de funcions és la carpeta Android ... NO TOCAR</li>
+							<li>El directori <span class="red">/res</span> conté tots els recursos que es fan servir a l’aplicació</li>
+							<li>El directori <span class="red">/assets</span> conté altres recursos que es fan servir a l’aplicació, com ara fitxers de text, bases de dades. NO TOCAR</li>
+							<li>El fitxer <span class="red">AndroidManifest.xml</span> és el fitxer on estan especificats els permisos i altres característiques de l’aplicació. </li>
+						</p>
+				</section>
+				<section>
+					<h2>Components bàsics d'una aplicació Android</h2>
+						<ul>
+							<li>Activitats</li>
+							<li>Serveis</li>
+							<li>Proveïdors de continguts</li>
+							<li>Receptors broadcast</li>
+						</ul>
+				</section>
+				<section>
+					<h2>Activitats</h2>
+						<ul>
+							<li>Una <span class="red">”Activity”</span> (activitat) representa una única pantalla amb una interfície d’usuari. </li>
+							<li>Cada activitat és independent de l'altre</li>
+							<li>En Android, les aplicacions poden activar activitats (pantalles) d’altres aplicacions</li>
+							<li>Una activitat està implementada com una subclasse de la classe “Activity”.</li>
+						</ul>
+						<a href="http://developer.android.com/guide/topics/fundamentals/activities.html">Link</a>
+				</section>
+
+				<section>
+					<h2>Serveis</h2>
+						<ul>
+							<li>Un <span class="red">”Service”</span> (servei) és un component que s’executa en el background (en el fons, que no es veu) per realitzar tasques per a treballs remots. </li>
+							<li>No tenen components d’interfície d’usuari</li>
+							<li>Poden fer les mateixes coses que una activitat, però no tenen interfície</li>
+							<li>Són útils per realitzar coses que es volen realitzar durant un temps, p. ex. agafar dades del receptor GPS del telèfon</li>
+							<li>Els serveis s’implementen com a classes derivades de la classe “Service”</li>
+						</ul>
+						<a href="http://developer.android.com/guide/topics/fundamentals/services.html">Link</a>
+				</section>
+				<section>
+					<h2>Proveïdors de continguts</h2>
+						<ul>
+							<li>Els <span class="red">”content providers”</span> (proveïdors de continguts) són interfícies per compartir dades entre les aplicacions.</li>
+							<li>Són els més adequats per compartir conjunts de dades entre aplicacions.</li>
+							<li>La informació es pot inserir, actualitzar, esborrar i consultar d’un proveïdor de continguts</li>
+							<li>p. ex. els Contacts Provider proporcionen la informació dels contactes del telèfon a diferents aplicacions.</li>
+							<li>Un content provider està implementat com una subclasse de “ContentProvider”</li>
+						</ul>
+						<a href="http://developer.android.com/guide/topics/providers/content-providers.html">Link</a>
+				</section>
+				<section>
+					<h2>Receptors broadcast</h2>
+						<ul>
+							<li>Els <span class="red">”broadcast receivers”</span> (receptors broadcast) són un component que respon a anuncis de sistema que van dirigits a totes les aplicacions del dispositiu (broadcast)</li>
+							<li>El receptor simplement es queda en un estat latent esperant activar-se quan un esdeveniment al qual està subscrit succeeix.</li>
+							<li>Els misstages broadcast els pot enviar tan el sistema com una aplicació</li>
+							<li>p. ex. una aplicació pot anunciar que s’hanacabat de descarregar algunes dades.</li>
+							<li>Un broadcast receiver està implementat com una subclasse de “BroadcastReceiver”</li>
+						</ul>
+						<a href="http://developer.android.com/reference/android/content/BroadcastReceiver.html">Link</a>
+				</section>
+				<section>
+					<h2>Intents</h2>
+						<ul>
+							<li>Tres dels quatre tipus de components (activitats, serveis i receptors broadcast) s’activen per missatges asíncrons anomenats <span class="red">”intents”</span> (intencions).</li>
+							<li>Un intent es crea amb un objecte de la classe Intent, que defineixen un missatge per activar un component específic (intent explícit) o un tipus de component (intent implícit)</li>
+							<li>Els misstages broadcast els pot enviar tan el sistema com una aplicació</li>
+							<li>p. ex. una aplicació pot anunciar que s’hanacabat de descarregar algunes dades.</li>
+							<li>Un broadcast receiver està implementat com una subclasse de “BroadcastReceiver”</li>
+						</ul>
+						<a href="http://developer.android.com/reference/android/content/BroadcastReceiver.html">Link</a>
+				</section>
+				<section>
+					<h2>El fitxer AndroidManifest.xml</h2>
+						<ul>
+							<li>Per anunciar al sistema els components que farà servir l’aplicació</li>
+							<li>Identifica els permisos que necessita l’aplicació (com ara, permisos per accedir a Internet). </li>
+							<li>Declara la versió de la plataforma, el nivell d’API mínim que necessita l’aplicació, basat en l’API que fa servir.</li>
+							<li>p. ex. una aplicació pot anunciar que s’hanacabat de descarregar algunes dades.</li>
+							<li>Un broadcast receiver està implementat com una subclasse de “BroadcastReceiver”</li>
+						</ul>
+						<a href="http://developer.android.com/reference/android/content/BroadcastReceiver.html">Link</a>
+				</section>
+				<section>
+					<h2>ApiDemos I</h2>
+					<p>Es pot aprendre molt de les funcionalitats que ens ofereix Android veient exemples. Instaleu l'exemple ApiDemos. 
+					</p>
+						<ul>
+							<li>En l'Eclipse,</li>
+							<li>File -> New -> Project -> Android Sample Project </li>
+							<li>Selecciona el nivell d'API</li>
+							<li>I després selecciona el projecte ApiDemos.</li>
+						</ul>
+				</section>
+				<section>
+					<h2>ApiDemos II</h2>
+					<p>Api Demos que us seran útils.</p>
+						<ul>
+							<li>Views ->Layouts, App -> Alert Dialogs, App -> Notification, App -> Preference, App -> Action Bar, App -> Activity -> Finish Affinity, App -> Activity -> Screen Orientation</li>
+							<li>Views -> Image Button, App -> Activity -> Animation</li>
+						</ul>
+				</section>
+				<section>
+					<h2>Depurar Codi I</h2>
+					<p>Per registrar tots els problemes i esdeveniments que tenen lloc al sistema, Android utilitza un sistema de Logs anomenat LogCat. En l'Eclipse: Window -> Show View -> Other -> LogCat.
+					En Aquesta vista podem veure tot els esdeveniments que passan, i filtrar per l'esdeveniment que nosaltres desitgem utilitzant les etiquetes o TAGs.
+					</p>
+				</section>
+				<section>
+					<h2>Depurar Codi II</h2>
+					<p>Per registrar els nostres propis missatges, hem de decidir un TAG, i utilitzar la class Log. Aquesta classe disposa de varis métodes per generar diferents tipus de missatges.
+					</p>
+						<ul>
+							<li>Log.e(): Errors</li>
+							<li>Log.w(): Warnings </li>
+							<li>Log.i(): Information</li>
+							<li>Log.d(): Debugging</li>
+							<li>Log.v(): Verbose</li>
+						</ul>
+				</section>
+
+				<section data-background="#007777">
+					<h2>activitat</h2>
+					<p>
+						Creem una aplicació HelloWorld amb un text al fitxer string.xml. L'executem a una màquina virtual Android, i al telefon. 
+					</p>
+				</section>
+				<section>
+					<h1>THANKS</h1>
+					<ul>
+						<li><a href="http://revealjs.jit.su/">IOC</a></li>
+						<li><a href="processing.org">El gran libro de Android</a></li>
+					</ul>
+				</section>
+			</div>
+		</div>
+		<script src="../lib/js/head.min.js"></script>
+		<script src="../js/reveal.min.js"></script>
+		<script>
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				//isaac
+				slideNumber: true,
+				mouseWheel: true,
+				transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
+				backgroundTransition: 'slide',
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				//transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: '../plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+		</script>
+	</body>
+</html>
