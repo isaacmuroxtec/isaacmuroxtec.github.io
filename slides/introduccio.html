@@ -35,7 +35,7 @@
   </script>
 
 		<script src="js/processing.min.js"></script>
-		
+
 		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
 		<script>
 			if( window.location.search.match( /print-pdf/gi ) ) {
@@ -58,14 +58,14 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section id="Processing">
-					<canvas style="z-index:-1;position:absolute;left:0px;top:0px;" id="canvas0" data-processing-sources="https://dl.dropboxusercontent.com/u/50554359/slides/sketch/prova.pde"></canvas>
-					<a href="http://www.processing.org"><img width="100" height="100" src="http://upload.wikimedia.org/wikipedia/commons/5/59/Processing_Logo_Clipped.svg"/></a>	
+					<canvas style="z-index:-1;position:absolute;left:0px;top:0px;" id="canvas0" data-processing-sources="sketch/prova.pde"></canvas>
+					<a href="http://www.processing.org"><img width="100" height="100" src="http://upload.wikimedia.org/wikipedia/commons/5/59/Processing_Logo_Clipped.svg"/></a>
 					<h1>Processing</h1>
 					<h3>1. Introducció</h3>
-						
+
 					<p>
-						<small>Creat per <a href="http://goo.gl/Q2zdYG">Isaac Muro</a> </small><br />
-						<img width="118" height="44" src="http://es.creativecommons.org/blog/wp-content/uploads/2013/04/by-sa_petit.png" alt="Creative Commons Licence">
+						<small>Creat per <a href="https://isaacmuro.github.io/">Isaac Muro</a> </small><br />
+						<a href="https://creativecommons.org/licenses/by-sa/4.0/"><img src="https://licensebuttons.net/l/by-sa/4.0/88x31.png" alt="Creative Commons Licence" /></a>
 					</p>
 				</section>
 				<section id="obtenir">
@@ -80,7 +80,7 @@
 				</section>
 				<section data-background="#007777" id="activitat1">
 					<h2>1. Reviseu els exemples</h2>
-					<p>Obriu el Processing, <span style="color:blue">File -> Examples</span>. Allà trobareu molts exemples on podeu veure el codi font i el resultat d'executar el codi. 
+					<p>Obriu el Processing, <span style="color:blue">File -> Examples</span>. Allà trobareu molts exemples on podeu veure el codi font i el resultat d'executar el codi.
 					</p>
 					<h2>2. Primer programa</h2>
 						<pre><code data-trim contenteditable class="actionscript">
@@ -119,7 +119,7 @@ void draw(){
 						</p>
 						<pre><code data-trim contenteditable class="actionscript">
 size(200, 100);
-// 200 és l'amplada de l'sketch en pixels 
+// 200 és l'amplada de l'sketch en pixels
 // 100 és l'altura de l'sketch en pixels
 					</code></pre>
 						<img  style="background:#FFFFFF;border:0px" src="img/size_0.png"/>
@@ -131,18 +131,10 @@ size(200, 100);
 						</p>
 						<pre><code data-trim contenteditable class="actionscript">
 background(145, 13, 86);
-// 145 és la quantitat de vermell (Red) 
+// 145 és la quantitat de vermell (Red)
 // 13 és la quantitat de verd (Green)
 // 86 és la quantitat de blau (Blue)
 					</code></pre>
-				</section>
-				<section>
-					<h2>background 2</h2>
-					<div style="width:200px;">
-					    <div id="sliderRed" style="margin-bottom:20px"></div>
-					    <div id="sliderGreen" style="margin-bottom:20px"></div>
-					    <div id="sliderBlue"></div>
-					</div>
 				</section>
 				<section>
 					<h2>Figures</h2>
@@ -164,12 +156,12 @@ background(145, 13, 86);
 						<pre><code data-trim contenteditable class="actionscript">
 rect(30, 20, 55, 55);
 // 30 és la posició X on comença a dibuixar-se el rectangle.
-// 20 és la posició Y on comença a dibuixar-se el rectangle. 
+// 20 és la posició Y on comença a dibuixar-se el rectangle.
 // 55 és l'ampla del rectangle.
 // 55 és l'altura del rectangle.
 					</code></pre>
 					<img style="background:#FFFFFF;border:0px" src="img/rect_0.png"/>
-	
+
 				</section>
 
 
@@ -180,12 +172,12 @@ rect(30, 20, 55, 55);
 						</p>
 						<pre><code data-trim contenteditable class="actionscript">
 stroke(204, 102, 0);
-// 204 és la quantitat de vermell (Red) 
+// 204 és la quantitat de vermell (Red)
 // 102 és la quantitat de verd (Green)
 // 0 és la quantitat de blau (Blue)
 					</code></pre>
 					<img style="background:#FFFFFF;border:0px" src="img/stroke_1.png"/>
-	
+
 				</section>
 				<section>
 					<h2>nostroke</h2>
@@ -204,7 +196,7 @@ noStroke();
 						</p>
 						<pre><code data-trim contenteditable class="actionscript">
 fill(204, 102, 0);
-// 204 és la quantitat de vermell (Red) 
+// 204 és la quantitat de vermell (Red)
 // 102 és la quantitat de verd (Green)
 // 0 és la quantitat de blau (Blue)
 					</code></pre>
@@ -224,7 +216,7 @@ noFill();
 				<section data-background="#007777" id="activitat2">
 						<h2>REPTE: Cara somrient</h2>
 						<p>
-							Intenteu reproduir la cara que teniu a continuació amb codi Processing. Només amb les instruccions que hem explicat, hi hauria suficient. 
+							Intenteu reproduir la cara que teniu a continuació amb codi Processing. Només amb les instruccions que hem explicat, hi hauria suficient.
 						</p>
 							<img  src="img/cara.png"/>
 				</section>
@@ -245,7 +237,7 @@ point(30, 75);
 				<section>
 					<h2>line</h2>
 						<p>
-							La funció <a href="http://processing.org/reference/line_.html">line</a> dibuixa una línia entre els dos punts indicats per les coordenades. 
+							La funció <a href="http://processing.org/reference/line_.html">line</a> dibuixa una línia entre els dos punts indicats per les coordenades.
 						</p>
 						<pre><code data-trim contenteditable class="actionscript">
 line(30, 20, 85, 75);
@@ -276,7 +268,7 @@ triangle(30, 75, 58, 20, 86, 75);
 				<section>
 					<h2>ellipse</h2>
 						<p>
-							La funció <a href="http://processing.org/reference/ellipse_.html">ellipse</a> dibuixa una elipse utilitzant un punt com a centre, i dos valors com a radi en X i radi en Y. 
+							La funció <a href="http://processing.org/reference/ellipse_.html">ellipse</a> dibuixa una elipse utilitzant un punt com a centre, i dos valors com a radi en X i radi en Y.
 						</p>
 						<pre><code data-trim contenteditable class="actionscript">
 ellipse(56, 46, 55, 55);
@@ -290,7 +282,7 @@ ellipse(56, 46, 55, 55);
 				<section>
 					<h2>arc</h2>
 						<p>
-							La funció <a href="http://processing.org/reference/arc_.html">arc</a> dibuixa un arc, que es pot entendre com una secció d'una elipse. 
+							La funció <a href="http://processing.org/reference/arc_.html">arc</a> dibuixa un arc, que es pot entendre com una secció d'una elipse.
 						</p>
 						<pre><code data-trim contenteditable class="actionscript">
 arc(50, 55, 50, 50, 0, HALF_PI);
@@ -298,8 +290,8 @@ arc(50, 55, 50, 50, 0, HALF_PI);
 // 55 és la coordenada Y del radi
 // 50 és l'amplada del radi en X.
 // 50 és l'altura del radi en Y.
-// 0 és on comença l'arc en graus. 
-// HALF_PI és on acaba l'arc en graus. 
+// 0 és on comença l'arc en graus.
+// HALF_PI és on acaba l'arc en graus.
 noFill();
 arc(50, 55, 60, 60, HALF_PI, PI);
 arc(50, 55, 70, 70, PI, PI+QUARTER_PI);
@@ -311,7 +303,7 @@ arc(50, 55, 80, 80, PI+QUARTER_PI, TWO_PI);
 				<section>
 					<h2>strokeweight</h2>
 						<p>
-							La funció <a href="http://processing.org/reference/strokeWeight_.html">strokeWeight</a> canvia l'amplada del contorn de les figures. 
+							La funció <a href="http://processing.org/reference/strokeWeight_.html">strokeWeight</a> canvia l'amplada del contorn de les figures.
 						</p>
 						<pre><code data-trim contenteditable class="actionscript">
 strokeWeight(1);  // Default
@@ -323,36 +315,15 @@ line(20, 70, 80, 70);
 					</code></pre>
 					<img style="background:#FFFFFF;border:0px" src="img/strokeWeight_.png"/>
 				</section>
-				<section id="arc">
-					<h2>arc</h2>
-						<p>
-							La funció <a href="http://processing.org/reference/arc_.html">arc</a> dibuixa un arc, que es pot entendre com una secció d'una elipse. 
-						</p>
-						<pre><code data-trim contenteditable class="actionscript">
-arc(50, 55, 50, 50, 0, HALF_PI);
-// 50 és la coordenada X del radi
-// 55 és la coordenada Y del radi
-// 50 és l'amplada del radi en X.
-// 50 és l'altura del radi en Y.
-// 0 és on comença l'arc en graus. 
-// HALF_PI és on acaba l'arc en graus. 
-noFill();
-arc(50, 55, 60, 60, HALF_PI, PI);
-arc(50, 55, 70, 70, PI, PI+QUARTER_PI);
-arc(50, 55, 80, 80, PI+QUARTER_PI, TWO_PI);
-
-					</code></pre>
-					<img style="background:#FFFFFF;border:0px" src="img/arc_.png"/>
-				</section>
 				<section data-background="#8c4738">
-					<h2>deures</h2>
+					<h2>REPTE: Dibuixar cara</h2>
 					<p>
-						Crear un personatge expresant un sentiment. Podeu dibuixar-vos a vosaltres. 
+						Crear un personatge expresant un sentiment. Podeu dibuixar-vos a vosaltres.
 					</p>
 					<p>
 						Exemples...
 					</p>
-					
+
 					<img style="background:#FFFFFF;border:0px" src="img/homer.png"/>
 					<img style="background:#FFFFFF;border:0px" src="img/somrient.png"/>
 				</section>
@@ -360,13 +331,15 @@ arc(50, 55, 80, 80, PI+QUARTER_PI, TWO_PI);
 					<h1>THANKS</h1>
 					<ul>
 						<li><a href="http://revealjs.jit.su/">Hakim El Hattab. Reveal.js</a></li>
-						<li><a href="processing.org">processing.org</a></li>
-						<li><a href="processingjs.org">processingjs.org</a></li>
-						<li><a href="openprocessing.org">openprocessing.org</a></li>
+						<li><a href="http://processing.org">processing.org</a></li>
+						<li><a href="http://processingjs.org">processingjs.org</a></li>
+						<li><a href="http://openprocessing.org">openprocessing.org</a></li>
 						<li><a href="http://go.yuri.at/p5/tutorial/">Tutorial de Processing para mentes Macromedia</a></li>
 					</ul>
 				</section>
-
+				<section data-background-image="img/end.jpg">
+                    <!-- The End -->
+				</section>
 			</div>
 
 		</div>
